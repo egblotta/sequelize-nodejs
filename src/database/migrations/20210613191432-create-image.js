@@ -17,6 +17,13 @@ module.exports = {
       description: {
         type: Sequelize.STRING
       },
+      products_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'products',
+          key: 'id'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

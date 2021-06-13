@@ -17,6 +17,34 @@ module.exports = {
       total: {
         type: Sequelize.DECIMAL
       },
+      payments_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'payments',
+          key: 'id'
+        }
+      },
+      shipping_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'shippings',
+          key: 'id'
+        }
+      },
+      users_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'users',
+          key: 'id'
+        }
+      },
+      states_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'states',
+          key: 'id'
+        }
+      },
       users_addresses: {
         type: Sequelize.INTEGER
       },
